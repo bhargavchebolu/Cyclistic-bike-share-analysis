@@ -1,0 +1,37 @@
+Followed the steps of the data analysis process: ask, prepare, process, analyze, share, and act to help the company to change the casual riders to annual members by giving top three recommendations. 
+
+Ask:
+
+The Cyclistic company wants to increase their members who purchase annual membership. Their design marketing strategies aimed at converting casual riders into annual members. In order to do that, the team need to understand how casual riders use Cyclistic bikes differently. 
+
+Prepare:
+
+The data is originated from Motivate International Inc. The public data that is used to explore how different customer types are using Cyclistic bikes. However, the data-privacy issues prohibit from using riders’ personally identifiable information. This means that it will not be able to connect pass purchases to credit card numbers to determine if casual riders live in the Cyclistic service area or if they have purchased multiple single passes.
+
+Process:
+
+I have used R programming to clean the data and for analyzing it. Two columns are added named rider_length and day_of_week. The rider_length describes the time travelled by the rider and the day_of_week talks about the day such as Sunday, Monday etc. I took the data for the year 2022 which is provided in the course. There are 12 csv files for the year 2022. 
+
+Analyze:
+
+Analyzing data is divided into four steps. 
+
+Step 1: Collecting data from the csv files. 
+Step 2: Wrangling data and combining into a single file. In MS Excel, first 3 months data is combined as first quarter. Remaining files are left individually as they are difficult to combine into quarters because of large data.
+Step 3: Cleaning and adding the data to prepare for analysis. New columns were added such as date, month, day, and year to analyze data based on them. Bad data is removed to ensure the correct results. Here the ride length less than zero seconds is removed and also the null values from the dataset. 
+Step 4: Conducting descriptive analysis. Performed descriptive analysis on ride length and compared with members and casual riders. Then carried out the visualizations to find the how members and casual riders use the bikes differently. 
+
+Share: 
+
+From the visualizations the key findings are as follows:
+1.	Every day casual riders spent more than 20 minutes on bikes while members spent less than 15 minutes.
+2.	Members takes a greater number of rides than the casual riders every day. 
+3.	Total number of rides are more in June, July and August by both casual riders and the members.
+
+Act: 
+
+Top three recommendations based on the analysis.
+
+1.	Giving special discount on annual membership for casual riders who spent more than 20 minutes on the bikes. 
+2.	Promoting the benefits of annual membership in June, July, and August. 
+3.	Providing comfortable bikes for annual members and normal bikes for casual riders. 
