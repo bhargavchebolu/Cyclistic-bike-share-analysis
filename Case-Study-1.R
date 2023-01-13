@@ -12,14 +12,14 @@ install.packages("ggplot2")
 library(tidyverse)  #helps wrangle data
 library(lubridate)  #helps wrangle date attributes
 library(ggplot2)  #helps visualize data
+setwd(".../Case Study 1/csv") #sets your working directory to simplify calls to data
 getwd() #displays your working directory
-setwd("D://Data/Case Studies/Case Study 1/csv") #sets your working directory to simplify calls to data
 
 #=====================
 # STEP 1: COLLECT DATA
 #=====================
 # Upload Divvy datasets (csv files) here
-Q1_2022 <- read_csv("Divvy_Trips_2022_Q1.csv")
+Q1_2022 <- read_csv("Divvy_Trips_2022_Q1.csv") # First three months have been comnibed into one file in MS Excel 
 Apr_2022 <- read_csv("202204-divvy-tripdata.csv")
 May_2022 <- read_csv("202205-divvy-tripdata.csv")
 Jun_2022 <- read_csv("202206-divvy-tripdata.csv")
@@ -95,7 +95,7 @@ all_trips$ride_length <- as.numeric(all_trips$ride_length2, units = "secs")
 # https://www.datasciencemadesimple.com/delete-or-drop-rows-in-r-with-conditions-2/
 all_trips_v2 <- all_trips[!(all_trips$ride_length<0),]
 glimpse(all_trips_v2) 
-all_trips_v2 <- na.omit(all_trips_v2)
+all_trips_v2 <- na.omit(all_trips_v2) # Removes null values
 # STEP 4: CONDUCT DESCRIPTIVE ANALYSIS
 #=====================================
 # Descriptive analysis on ride_length (all figures in seconds)
@@ -166,7 +166,7 @@ all_trips_v2 %>%
 # Create a csv file that we will visualize in Excel, Tableau, or my presentation software
 # N.B.: This file location is for a Mac. If you are working on a PC, change the file location accordingly (most likely "C:\Users\YOUR_USERNAME\Desktop\...") to export the data. You can read more here: https://datatofish.com/export-dataframe-to-csv-in-r/
 counts <- aggregate(all_trips_v2$ride_length ~ all_trips_v2$member_casual + all_trips_v2$day_of_week, FUN = mean)
-write.csv(counts, file = 'D://Data/Case Studies/Case Study 1/csv/avg_ride_length.csv')
+write.csv(counts, file = '.../Case Study 1/csv/avg_ride_length.csv')
 
 
 
